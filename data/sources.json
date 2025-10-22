@@ -1,0 +1,14 @@
+{
+  "car_factors_2024_uk_defra": {
+    "name": "UK DEFRA/BEIS GHG Conversion Factors (2024)",
+    "url": "https://www.gov.uk/government/collections/government-conversion-factors-for-company-reporting-of-greenhouse-gas-emissions"
+  },
+  "icao_2024_distance_bands": {
+    "name": "ICAO / ICCT – aviation emissions per passenger-km",
+    "url": "https://www.icao.int/"
+  },
+  "imo_2023_passenger_proxy": {
+    "name": "IMO / academic syntheses for maritime passenger intensity",
+    "url": "https://www.imo.org/"
+  }
+}

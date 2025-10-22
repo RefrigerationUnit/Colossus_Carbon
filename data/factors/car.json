@@ -1,0 +1,8 @@
+{
+  "sourceId": "car_factors_2024_uk_defra",
+  "lastUpdated": "2024-05-01",
+  "notes": "Approximate well-to-wheel average for a typical petrol car occupancy ~1.6. Use more granular classes later.",
+  "factors": {
+    "average_g_per_km": 171
+  }
+}

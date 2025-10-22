@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Carbon Footprint — Trip Builder</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="assets/favicon.svg">
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
+    <header id="app-header" class="app-header"></header>
+
+    <main class="layout">
+      <section class="globe-card">
+        <div id="globe"></div>
+      </section>
+
+      <aside class="right-col">
+        <section class="card" id="trip-panel"></section>
+        <section class="card" id="summary-card">
+          <h3 class="card-title">Carbon footprint</h3>
+          <div id="summary-content" class="summary-content">
+            <p class="muted">Add & confirm at least two locations to compute distance. Toggle metrics above to include them.</p>
+          </div>
+        </section>
+      </aside>
+    </main>
+
+    <footer class="app-footer">
+      <span>Data sources appear when a metric is enabled.</span>
+    </footer>
+
+    <!-- App -->
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
