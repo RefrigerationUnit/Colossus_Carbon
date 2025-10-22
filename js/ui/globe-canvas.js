@@ -1,8 +1,6 @@
-// Use the ESM build of globe.gl directly from a CDN (no bundler needed)
-import createGlobe from 'https://unpkg.com/globe.gl?module';
-
+// js/ui/globe-canvas.js
 export function initGlobe(container) {
-  const globe = createGlobe()(container)
+  const globe = window.Globe()(container)
     .globeImageUrl('https://unpkg.com/three-globe/example/img/earth-night.jpg')
     .bumpImageUrl('https://unpkg.com/three-globe/example/img/earth-topology.png')
     .backgroundColor('#0b0f14')
