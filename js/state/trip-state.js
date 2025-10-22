@@ -17,11 +17,15 @@ export function addRow() {
   emit();
 }
 
-export function updateText(id, text) {
+export function updateText(id, text, opts = {}) {
   const it = getItem(id); if (!it) return;
   it.text = text;
-  if (it.status === 'ok') it.status = 'idle'; // editing resets status
-  emit();
+  if (it.status === 'ok') it.status = 'idle';
+  if (opts.silent) {           // <-- don't re-render, just persist
+    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); } catch {}
+    return;
+  }
+  emit();                      // normal path (re-render)
 }
 
 export function setStatus(id, status) {

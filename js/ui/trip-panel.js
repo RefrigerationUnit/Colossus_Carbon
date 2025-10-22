@@ -45,13 +45,20 @@ function makeRow(item, index) {
   if (item.status === 'error') row.insertAdjacentHTML('beforeend', `<span class="status error">not found</span>`);
   if (item.status === 'ok') okBtn.classList.add('saved');
 
-  input.addEventListener('input', (e) => Trip.updateText(item.id, e.target.value));
-  input.addEventListener('keydown', (e) => { if (e.key === 'Enter') confirmRow(item.id); });
+  // ✅ only this one input listener (silent)
+  input.addEventListener('input', (e) =>
+    Trip.updateText(item.id, e.target.value, { silent: true })
+  );
+
+  input.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter') confirmRow(item.id);
+  });
   okBtn.addEventListener('click', () => confirmRow(item.id));
   delBtn.addEventListener('click', () => Trip.removeRow(item.id));
 
   return row;
 }
+
 
 async function confirmRow(id) {
   Trip.setStatus(id, 'searching');
