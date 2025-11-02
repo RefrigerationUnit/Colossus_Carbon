@@ -1,8 +1,0 @@
-{
-  "sourceId": "imo_2023_passenger_proxy",
-  "lastUpdated": "2023-12-01",
-  "notes": "Passenger-km proxy derived from ferry/cruise operational averages. Highly route-dependent; use with caution.",
-  "factors": {
-    "pax_g_per_km": 19
-  }
-}
